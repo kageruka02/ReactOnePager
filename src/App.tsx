@@ -14,7 +14,6 @@ function App() {
         <Navbar />
         <Intro />
         <Search />
-        {/* <Cyan /> */}
         <Footer />
         {/* <Div4 /> */}
       </div>
