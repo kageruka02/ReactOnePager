@@ -36,7 +36,9 @@ function Footer() {
                       {item}
                     </div>
                   ) : (
-                    <div key={subIndex}>{item}</div>
+                    <div key={subIndex} className="justWords">
+                      {item}
+                    </div>
                   )
                 )}
               </div>

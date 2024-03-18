@@ -39,9 +39,15 @@ let thedivparagraph: any[] = [
 ];
 
 function Search() {
+  const [buttonIndex, SetbuttonIndex] = useState<number>(-50);
+  const [error, setError] = useState<string>("");
   const [inputUrl, setInputUrl] = useState<string>("");
   const [marginTop, setMarginTop] = useState(70);
-  const [linksArray, setlinksArray] = useState<Array<any>>(["hello"]);
+  const [copy, setCopy] = useState<string>("copy");
+  const [linksArray, setlinksArray] = useState<Array<any>>([
+    ["http//:youtube.com/", "http:urlyou"],
+    ["http//:youtube.com/", "leon"],
+  ]);
   useEffect(() => {
     // Calculate margin top based on the number of elements in linksArray
     setMarginTop(70 + linksArray.length * 55);
@@ -60,13 +66,31 @@ function Search() {
   }, []);
 
   /*this is the comment*/
+  const copyText = (text: string, index: number) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        SetbuttonIndex(index);
+
+        setTimeout(() => {
+          SetbuttonIndex(-50);
+          setCopy("copy");
+        }, 5000);
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+        alert("Failed to copy text. Please try again.");
+      }); // this copies text to clipboard
+  };
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setError("");
     setInputUrl(event.target.value);
   };
 
   const shortenlinks = async () => {
     if (inputUrl.trim() === "") {
+      setError("please add a link");
       return;
     }
     try {
@@ -110,17 +134,28 @@ function Search() {
               Shorten it
             </div>
           </div>
-          <div className="ErrorMessage">why?</div>
+          <div className="ErrorMessage">{error}</div>
         </div>
-        {linksArray.map(() => {
+        {linksArray.map((e, index) => {
           return (
             <>
               <div className="thesearchdiv">
                 <div className="searching">
-                  <div className="thelink">https//youtube.com </div>
+                  <div className="thelink">{e[0]}</div>
                   <div className="shortenedlink">
-                    <div>url./eahchf/</div>
-                    <div className="copyButton">copy</div>
+                    <div>{e[1]}</div>
+                    <div
+                      className="copyButton"
+                      style={{
+                        background:
+                          index === buttonIndex
+                            ? "#151925"
+                            : "rgb(22, 206, 227)",
+                      }}
+                      onClick={() => copyText(e[1], index)}
+                    >
+                      {index !== buttonIndex ? copy : "copied!"}
+                    </div>
                   </div>
                 </div>
               </div>

@@ -10,7 +10,7 @@ import Footer from "./components/footer";
 function App() {
   return (
     <>
-      <div>
+      <div style={{ zoom: "min(100%, 0.5)" }}>
         <Navbar />
         <Intro />
         <Search />

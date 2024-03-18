@@ -25,6 +25,9 @@ nav {
   justify-content: space-between;
   flex: 2;
 }
+.navdiv1 > div:hover {
+  color: black;
+}
 .ShortlyBold {
   font-size: 2rem;
   color: black;

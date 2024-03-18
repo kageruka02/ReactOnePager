@@ -8,6 +8,9 @@
   width: 15px;
   margin-right: 20px;
 }
+.socialmedia:hover {
+  background-color: rgb(22, 206, 227);
+}
 .navClass {
   margin: 0 auto;
   padding-left: 12%;
@@ -22,6 +25,14 @@
   align-items: flex-start;
   height: 100%;
   flex: 1;
+}
+.justWords {
+  /* font-weight: 600; */
+  /* color: white; */
+  margin-bottom: 10px;
+}
+.justWords:hover {
+  color: rgb(22, 206, 227);
 }
 @media screen and (max-width: 650px) {
   .footerElements {
