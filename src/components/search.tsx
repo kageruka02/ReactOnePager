@@ -115,7 +115,7 @@ function Search() {
           </div>
           <div className="ErrorMessage">why are you here?</div>
         </div>
-        {linksArray.map((e) => {
+        {linksArray.map(() => {
           return (
             <>
               <div className="thesearchdiv">

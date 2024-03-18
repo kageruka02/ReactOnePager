@@ -3,7 +3,7 @@ import Navbar from "./components/navbar";
 import Intro from "./components/introduction";
 import "./components/cssfiles/navbar.css";
 import Search from "./components/search";
-import Cyan from "./components/AdvancedCyan";
+// import Cyan from "./components/AdvancedCyan";
 // import Div4 from "./components/4div";
 import Footer from "./components/footer";
 
