@@ -1,0 +1,41 @@
+.footerElements {
+  display: flex;
+  flex-direction: row;
+  flex: 3;
+  gap: 15%;
+}
+.socialmedia {
+  width: 15px;
+  margin-right: 20px;
+}
+.navClass {
+  margin: 0 auto;
+  padding-left: 12%;
+  gap: 30px;
+}
+.Shortlydiv2 {
+  margin-top: -125px;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  font-weight: 600;
+  align-items: flex-start;
+  height: 100%;
+  flex: 1;
+}
+@media screen and (max-width: 650px) {
+  .footerElements {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  .navClass {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .Shortlydiv2 {
+    margin-top: 0;
+    margin-left: -60px;
+  }
+}
