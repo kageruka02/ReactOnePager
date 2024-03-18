@@ -110,7 +110,7 @@ function Search() {
               Shorten it
             </div>
           </div>
-          <div className="ErrorMessage">why are you here?</div>
+          <div className="ErrorMessage">why?</div>
         </div>
         {linksArray.map(() => {
           return (
