@@ -71,16 +71,13 @@ function Search() {
     }
     try {
       console.log(inputUrl);
-      const response = await fetch(
-        "https://api.allorigins.win/raw?url=https://cleanuri.com/api/v1/shorten",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(`url=${encodeURIComponent(inputUrl)}`),
-        }
-      );
+      const response = await fetch("https://cleanuri.com/api/v1/shorten", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(`url=${encodeURIComponent(inputUrl)}`),
+      });
       if (!response.ok)
         throw new Error(`failed kageruka${response.statusText}`);
       const data = await response.json();
