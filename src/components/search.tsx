@@ -52,6 +52,7 @@ function Search() {
     // Calculate margin top based on the number of elements in linksArray
     setMarginTop(70 + linksArray.length * 55);
   }, [linksArray]);
+
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -91,6 +92,9 @@ function Search() {
   const shortenlinks = async () => {
     if (inputUrl.trim() === "") {
       setError("please add a link");
+      setTimeout(() => {
+        setError("");
+      }, 10000);
       return;
     }
     try {
@@ -112,6 +116,7 @@ function Search() {
       console.log(error);
     }
   };
+
   return (
     <>
       <div>
