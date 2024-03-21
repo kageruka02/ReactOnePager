@@ -120,6 +120,9 @@
   background-color: rgb(90, 227, 242);
 }
 @media screen and (max-width: 650px) {
+  .searching {
+    font-size: 0.8rem;
+  }
   .searchBar {
     display: flex;
     flex-direction: column;
@@ -135,5 +138,11 @@
     width: 83%;
     margin: 0;
     display: flex;
+  }
+  .copyButton {
+    padding: 6px 10px;
+  }
+  .shortenedlink {
+    gap: 0;
   }
 }

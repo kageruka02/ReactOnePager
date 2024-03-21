@@ -21,7 +21,7 @@ function Div4() {
   return (
     <>
       <div className="search" style={{ width: "110%", height: "200px" }}>
-        <img className="searchphoto" src={isMobile ? image : image1} alt="" />
+        <img className="searchphoto" src={isMobile ? image1 : image} alt="" />
         <div className="Boost">Boost your links today</div>
         <ButtonGreen words="Get Started" />
       </div>

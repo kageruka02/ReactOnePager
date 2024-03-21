@@ -7,3 +7,13 @@
   z-index: 30000;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 422px) {
+  .Boost {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 280px) {
+  .Boost {
+    font-size: 1.3rem;
+  }
+}

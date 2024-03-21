@@ -34,6 +34,11 @@
 .justWords:hover {
   color: rgb(22, 206, 227);
 }
+.title {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 30px;
+}
 @media screen and (max-width: 650px) {
   .footerElements {
     flex-direction: column;
@@ -48,5 +53,18 @@
   .Shortlydiv2 {
     margin-top: 0;
     margin-left: -60px;
+  }
+  .justWords {
+    display: flex;
+    justify-content: center;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+  }
+  .Shortlydiv2 {
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
   }
 }

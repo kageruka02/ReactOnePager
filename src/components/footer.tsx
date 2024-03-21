@@ -25,14 +25,7 @@ function Footer() {
               <div key={index}>
                 {list.map((item, subIndex) =>
                   subIndex === 0 ? (
-                    <div
-                      key={subIndex}
-                      style={{
-                        fontWeight: 600,
-                        color: "white",
-                        marginBottom: "30px",
-                      }}
-                    >
+                    <div key={subIndex} className="title">
                       {item}
                     </div>
                   ) : (

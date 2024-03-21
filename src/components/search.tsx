@@ -148,7 +148,11 @@ function Search() {
                 <div className="searching">
                   <div className="thelink">{e[0]}</div>
                   <div className="shortenedlink">
-                    <div>{e[1]}</div>
+                    <div>
+                      {window.innerWidth <= 350
+                        ? e[1].slice(0, 4) + "..."
+                        : e[1]}
+                    </div>
                     <div
                       className="copyButton"
                       style={{
