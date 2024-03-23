@@ -13,7 +13,7 @@ function App() {
       clearTimeout(timeoutId);
       timeoutId = window.setTimeout(() => {
         SetScrollLeft(window.scrollX);
-        console.log(scrollleft);
+        console.log(scrollleft); /*this is scroll left*/
       }, 1);
     };
     document.addEventListener("scroll", handlescroll);
