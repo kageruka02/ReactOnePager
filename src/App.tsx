@@ -2,7 +2,7 @@ import Navbar from "./components/navbar";
 import Intro from "./components/introduction";
 import "./components/cssfiles/navbar.css";
 import Search from "./components/search";
-import Footer from "./components/footer";
+import Footer from "./components/footer"; /*getting the Footer files*/
 import { useEffect, useState } from "react";
 function App() {
   const [scrollleft, SetScrollLeft] = useState<number>(0);
