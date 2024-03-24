@@ -31,6 +31,7 @@ function App() {
           overflowX: "hidden",
           transition: "transform 1s ease",
           transform: `translateX(-${scrollleft}px)`,
+          background: "yellow",
         }}
       >
         <Navbar />
